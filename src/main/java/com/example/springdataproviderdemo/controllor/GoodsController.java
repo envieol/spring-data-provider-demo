@@ -13,8 +13,13 @@ import java.util.Map;
 
 @RestController
 public class GoodsController {
+
+    public String a;
     @GetMapping("books")
-    private Map<String, Object> getBooks() {
+    private Map<String, Object> getBooks() throws InterruptedException {
+        a = "books";
+        Thread.sleep(10000);
+        System.out.println(a);
         Book book1 = Book.builder().id("book1").name("Java").price(new BigDecimal("16.999")).pages(99).build();
         Book book2 = Book.builder().id("book2").name("C++").price(new BigDecimal("232.45")).pages(59).build();
         Map<String, Object> res = new HashMap<>();
@@ -24,6 +29,8 @@ public class GoodsController {
 
     @GetMapping("pens")
     private Map<String, Object> getPens() {
+        a="pens";
+        System.out.println(a);
         Pen pen1 = Pen.builder().id("pen1").name("pencil").price(new BigDecimal("16.999")).length(new BigDecimal("13")).build();
         Pen pen2 = Pen.builder().id("pen2").name("gel Pen").price(new BigDecimal("232.45")).length(new BigDecimal("8")).build();
         Map<String, Object> res = new HashMap<>();
