@@ -18,6 +18,21 @@
 		<java.version>1.8</java.version>
 	</properties>
 
+
+
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Nexus Releases Repository</name>
+			<url>http://39f7769h48.zicp.vip/repository/maven-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Nexus Snapshots Repository</name>
+			<url>http://39f7769h48.zicp.vip/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<dependencies>
 	    <dependency>
 			<groupId>org.projectlombok</groupId>
