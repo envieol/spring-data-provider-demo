@@ -8,18 +8,21 @@ pipeline {
         echo "branch is ${env.branch}"
       }
     }
+
     stage('Test') {
       steps {
         sh 'printenv'
-        echo "so far, will do nothing"
+        echo 'so far, will do nothing'
       }
     }
-	stage('Deploy') {
+
+    stage('Deploy') {
       steps {
         sh 'printenv'
-        echo "so far, will do nothing"
+        echo 'so far, will do nothing'
       }
     }
+
   }
   environment {
     branch = 'master'
