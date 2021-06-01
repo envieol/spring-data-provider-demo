@@ -3,13 +3,14 @@ pipeline {
   stages {
     stage('Maven Build') {
       steps {
-        echo "begin to clone maven project ${env.env}"
         sh 'printenv'
+        echo "begin to clone maven project ${env.GIT_URL}"
+        echo "branch is ${env.branch}"
       }
     }
 
   }
   environment {
-    env = 'master'
+    branch = 'master'
   }
 }
