@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Maven Build') {
       steps {
-        echo 'begin to clone maven project'
+        echo 'begin to clone maven project ${env}'
       }
     }
 
