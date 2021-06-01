@@ -4,6 +4,7 @@ pipeline {
     stage('Maven Build') {
       steps {
         echo 'begin to clone maven project ${env}'
+        sh 'printenv'
       }
     }
 
