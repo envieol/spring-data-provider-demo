@@ -1,5 +1,9 @@
 pipeline {
   agent any
+  tools {
+        maven 'Maven_3.8.1'
+        git 'Git_2.27.0'
+    }
   stages {
     stage('Example') {
       steps {
