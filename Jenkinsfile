@@ -35,7 +35,7 @@ pipeline {
 
   }
   environment {
-    branch = 'master'
+    BRANCH_NAME = 'develop'
   }
   parameters {
     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
