@@ -14,7 +14,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'printenv'
-        echo "begin to clone maven project ${env.GIT_URL}"
+        sh 'mvn clean package'
       }
     }
 
