@@ -1,9 +1,5 @@
 pipeline {
   agent any
-  tools {
-        maven 'Maven_3.8.1'
-        git 'Git_2.27.0'
-    }
   stages {
     stage('Example') {
       steps {
@@ -36,6 +32,10 @@ pipeline {
       }
     }
 
+  }
+  tools {
+    maven 'Maven_3.8.1'
+    git 'Git_2.27.0'
   }
   parameters {
     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
