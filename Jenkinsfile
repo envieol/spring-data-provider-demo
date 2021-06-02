@@ -15,7 +15,6 @@ pipeline {
       steps {
         sh 'printenv'
         echo "begin to clone maven project ${env.GIT_URL}"
-        echo "branch is ${env.branch}"
       }
     }
 
