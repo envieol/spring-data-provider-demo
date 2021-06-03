@@ -2,12 +2,23 @@ pipeline {
   agent any
   stages {
     stage('Example') {
-      steps {
-        echo "Hello ${params.PERSON}"
-        echo "Biography: ${params.BIOGRAPHY}"
-        echo "Toggle: ${params.TOGGLE}"
-        echo "Choice: ${params.CHOICE}"
-        echo "Password: ${params.PASSWORD}"
+      parallel {
+        stage('Example') {
+          steps {
+            echo "Hello ${params.PERSON}"
+            echo "Biography: ${params.BIOGRAPHY}"
+            echo "Toggle: ${params.TOGGLE}"
+            echo "Choice: ${params.CHOICE}"
+            echo "Password: ${params.PASSWORD}"
+          }
+        }
+
+        stage('Example2') {
+          steps {
+            echo 'example2'
+          }
+        }
+
       }
     }
 
